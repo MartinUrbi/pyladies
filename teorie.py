@@ -1,4 +1,7 @@
-assert a < b
+import pytest
 
-if a >= b:
-    raise AssertionError()
+import piskvorky
+
+def test_tah_chyba():
+    with pytest.raises(ValueError):
+        piskvorky.tah_pocitace('oxoxoxoxoxoxoxoxoxox')
